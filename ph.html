@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>OP booking</title>
-  <link rel="icon" type="image/png" href="hlog.jpg">
+  <link rel="icon" type="image/png" href="fav.jpg">
   <style>
    
     body {
       font-family: Arial, sans-serif;
-      background-image: url('opd2.jpg');
+      background-image: url('stc.jpg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -65,12 +65,12 @@
   <div class="container">
     <h2>BOOKING FORM</h2>
     
-    <form id="bookingForm" action="str.php" method="post">
+    <form id="bookingForm" action="str.php"  method="post">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" required>
 
       <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="phone" required>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" title="Should be 10 digits"     required>
 
       <label for="age">Age:</label>
       <input type="number" id="age" name="age" required>
