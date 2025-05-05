@@ -32,7 +32,7 @@ $blood  = $_POST['blood'];
 $doctor = $_POST['doctor'];
 
 
-$sql = "INSERT INTO data(name, phone, age, gender, date, blood, doctor)
+$sql = "INSERT INTO test1(name, phone, age, gender, date, blood, doctor)
         VALUES ('$name', '$phone', $age, '$gender', '$date', '$blood', '$doctor')";
 
 if ($conn->query($sql) === TRUE) {

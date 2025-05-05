@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Search Ops</title>
+  <title>PHP search</title>
+  <link rel="icon" type="image/png" href="fav.jpg">
   <style>
     * {
       box-sizing: border-box;
@@ -123,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date = $_POST['date'];
     $doctor = $_POST['doctor'];
 
-    $query = "SELECT * FROM data WHERE 1=1";
+    $query = "SELECT * FROM test1 WHERE 1=1";
     if (!empty($date)) {
         $query .= " AND date = '$date'";
     }
@@ -147,6 +148,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   </tr>";
         }
         echo "</table>";
+
+        echo "<button onclick='window.print()' style='margin-top: 20px;'>Print Results</button>";
+
     } else {
         echo "<p>No bookings.</p>";
     }
@@ -155,10 +159,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 </div>
-<script>
+<!-- <script>
     
     const today = new Date().toISOString().split('T')[0];
   document.getElementById("date").setAttribute("min", today);
-</script>
+</script> -->
   </body>
 </html>
